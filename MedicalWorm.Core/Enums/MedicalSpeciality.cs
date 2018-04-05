@@ -2,7 +2,7 @@
 {
     public enum MedicalSpeciality
     {
-        General,
+        General = 1,
         Cardiothoracic,
         Vascular,
         Oncology,

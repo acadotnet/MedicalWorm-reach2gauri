@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MedicalWorm.Core.Interfaces
+﻿namespace MedicalWorm.Core.Interfaces
 {
     public interface IEmployee
     {

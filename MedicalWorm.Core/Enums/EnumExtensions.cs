@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MedicalWorm.Core.Enums
 {
@@ -12,7 +9,7 @@ namespace MedicalWorm.Core.Enums
     {
         public static string MedicalLicenseFormatted2(this MedicalLicense license, bool isUpperCase = true, bool usePeriods = true)
         {       
-            var abbrev = "";
+            var abbrev = string.Empty;
             switch (license)
             {
                 case MedicalLicense.DoctorofMedicine:
@@ -25,10 +22,6 @@ namespace MedicalWorm.Core.Enums
                     abbrev = usePeriods
                         ? "D.O."
                         : "DO";
-                    break;
-
-                default:
-                    abbrev = "";
                     break;
             }
 
