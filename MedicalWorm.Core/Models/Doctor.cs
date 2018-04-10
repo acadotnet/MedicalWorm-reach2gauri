@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using MedicalWorm.Core.Enums;
 using MedicalWorm.Core.Interfaces;
 
@@ -18,6 +19,20 @@ namespace MedicalWorm.Core.Models
         public Nurse PrimaryNurse { get; set; }
 
         public Guid PrescriptionAuthorizationId { get; set; }
+
+        public Nurse GetPrimaryNurse(List<Nurse> nurses)
+        {
+            if (nurses.Any(n => n.IsRegisteredNurse))
+            {
+                PrimaryNurse = nurses.Where(n => n.IsRegisteredNurse).First();
+            }
+            else
+            {
+                PrimaryNurse = nurses.OrderBy(n => n.HoursWorked).Take(1);
+            }
+
+            return PrimaryNurse;
+        }
 
         public string PrintBadge()
         {

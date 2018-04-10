@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MedicalWorm.Core.Enums
@@ -7,6 +8,11 @@ namespace MedicalWorm.Core.Enums
 
     public static class EnumExtensions
     {
+        public static List<string> RegisteredCertificates()
+        {
+            
+        }
+
         public static string MedicalLicenseFormatted2(this MedicalLicense license, bool isUpperCase = true, bool usePeriods = true)
         {       
             var abbrev = string.Empty;

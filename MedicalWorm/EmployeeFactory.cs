@@ -54,6 +54,17 @@ namespace MedicalWorm
                     LicenseObtained = MedicalLicense.DoctorofMedicine,
                     PrescriptionAuthorizationId = Guid.NewGuid(),
                     Nurses = new List<Nurse>()
+                },
+                new Doctor
+                {
+                    EmployeeId = 1287,
+                    Name = "Derek Sheperd",
+                    HoursWorked = 80.2M,
+                    VacationDays = 20,
+                    Speciality = MedicalSpeciality.Neurosurgery,
+                    LicenseObtained = MedicalLicense.DoctorofMedicine,
+                    PrescriptionAuthorizationId = Guid.NewGuid(),
+                    Nurses = new List<Nurse>()
                 }
             };
         }
@@ -119,6 +130,23 @@ namespace MedicalWorm
                         NursingCertification.HWNC
                     },
                     FloorsWorked = new[] { 1, 2, 5}
+                },
+                new Nurse
+                {
+                    EmployeeId = 1683,
+                    Name = "Meredith",
+                    HoursWorked = 57,
+                    VacationDays = 10,
+                    IsRegisteredNurse = true,
+                    Certifications = new List<NursingCertification>
+                    {
+                        NursingCertification.HWNC,
+                        NursingCertification.ACRN,
+                        NursingCertification.AGACNP,
+                        NursingCertification.CHPLN,
+                        NursingCertification.HWNC
+                    },
+                    FloorsWorked = new[] { 1, 3, 4}
                 }
             };
         }
@@ -147,6 +175,13 @@ namespace MedicalWorm
                     ExternalAgencyName = "StaffMark",
                     Name = "Derek",
                     HoursWorked = 40
+                },
+                new Janitor
+                {
+                    ExternalAgencyId = "10315",
+                    ExternalAgencyName = "ABC Staffing",
+                    Name = "Danny",
+                    HoursWorked = 28
                 }
             };
         }
